@@ -1,1 +1,1 @@
-# simple web app with daily stoic quotes
+- simple web app with daily stoic quotes
