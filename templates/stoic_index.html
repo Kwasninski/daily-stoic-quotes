@@ -1,0 +1,58 @@
+{% block head %}
+<title>Zadania do wykonania</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh; /* pełna wysokość ekranu */
+        display: flex;
+        justify-content: center;  /* centrowanie poziome */
+        align-items: center;      /* centrowanie pionowe */
+        background-color: #f4f4f4; /* opcjonalnie tło */
+        font-family: serif, Georgia, 'Times New Roman';
+    }
+    .content {
+        text-align: center;
+        max-width: 800px;
+        padding: 40px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    blockquote {
+        font-size: 1.4em;
+        font-style: italic;
+        margin: 30px 0;
+        padding: 20px;
+        border-left: 5px solid #ccc;
+        background-color: #f9f9f9;
+    }
+    p {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #5b4b4b;
+        font-size: 1.2em;
+        text-shadow:  0 4px 20px rgba(0,0,0,0.1);
+        font-weight: bold;
+        
+    }
+
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Stoic Quote of the Day 📜</h1>
+    <blockquote>{{ quote }}</blockquote>
+    <p>— {{ author }}</p>
+    <a href="/">Next quote</a>
+</div>
+{% endblock %}
