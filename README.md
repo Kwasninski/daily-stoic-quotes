@@ -1,1 +1,7 @@
-- simple web app with daily stoic quotes
+Simple web app for stoic quotes
+
+Made with:
+- Flask
+- html
+- css
+- requests
