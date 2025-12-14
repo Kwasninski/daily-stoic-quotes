@@ -1,4 +1,5 @@
 {% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zadania do wykonania</title>
 <style>
     body {
@@ -11,6 +12,9 @@
         font-family: serif, Georgia, 'Times New Roman';
     }
     .content {
+        display: flex;
+        flex-direction: column;
+
         text-align: center;
         max-width: 800px;
         padding: 40px;
@@ -35,15 +39,49 @@
         font-weight: bold;
     }
     a {
-        display: inline-block;
-        margin-top: 10px;
+        align-self: flex-end;   /* prawo */
+        margin-top: 30px;       /* dół względem treści */
+
         text-decoration: none;
         color: #5b4b4b;
         font-size: 1.2em;
-        text-shadow:  0 4px 20px rgba(0,0,0,0.1);
         font-weight: bold;
-        
+        text-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+
+
+
+    @media (max-width: 480px) {
+        body {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+}
+
+        .content {
+            width: 90vw;
+            padding: 24px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        blockquote {
+            font-size: 1.2em;
+            padding: 16px;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        a {
+            font-size: 1em;
+        }
+    }
+
 
 </style>
 {% endblock %}
